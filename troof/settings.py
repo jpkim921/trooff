@@ -1,4 +1,4 @@
-from additional_settings import *
+from .additional_settings import *
 
 """
 Django settings for troof project.
