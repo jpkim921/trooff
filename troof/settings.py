@@ -1,3 +1,5 @@
+from additional_settings import *
+
 """
 Django settings for troof project.
 
@@ -20,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '!4#hoc5_!h&7e)r@y(i789uot@x$5m5pn5pfs%21+@o8=)^@f('
+# SECRET_KEY = 'haha'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
