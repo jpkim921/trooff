@@ -1,0 +1,101 @@
+{% extends 'donations/base.html' %} {% load static %} {% block css-style %}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'donations/stylesheets/donation_form_page_style.css' %}"
+/>
+{% endblock %} {% block content %}
+<div class="main">
+  <div class="top1">
+    <h1>Trooff</h1>
+    <hr class="line" />
+  </div>
+  <p class="top2">
+    Thank you for your donation. All the funds will go towards purchasing
+    pottery and farming equipment for individuals living in developing
+    countries. <br />
+    If you need any assistance, please reach out to Troof@gmail.com.
+  </p>
+
+  <div class="pottery2">
+    <img
+      src="{% static 'donations/images/pottery2.jpg' %}"
+      alt="row of pottery"
+    />
+  </div>
+
+  <form
+    class="form"
+    action="http://www.example.com/subscribe.php"
+    method="POST"
+  >
+    <div class="information">
+      <h2 class="personal-information">Personal Information</h2>
+      <div>
+        <label>Full Name<br /></label>
+        <input
+          type="text"
+          name="field1"
+          class="name"
+          placeholder="First"
+        /><br />
+        <input type="text" name="field2" class="name" placeholder="Last" />
+      </div>
+      <div>
+        <label>Email <br /></label>
+        <input
+          type="text"
+          name="email"
+          class="email"
+          placeholder="jane_doe@gmail.com"
+        />
+      </div>
+      <div>
+        <label>Phone Number<br /></label>
+        <input
+          type="text"
+          name="phone number"
+          class="phone_number"
+          placeholder="819-234-8754"
+        />
+      </div>
+    </div>
+
+    <div class="details">
+      <h2>Donation Amount</h2>
+      <div>
+        <input
+          type="text"
+          name="cc"
+          class="cc"
+          placeholder="Donation Amount in USD $"
+        />
+      </div>
+      <h2 class="cc-details-heading">Credit Card Details</h2>
+      <div class="cc_info">
+        <div>
+          <input
+            type="text"
+            name="cc"
+            class="cc"
+            placeholder="Vadivd Card Number"
+          />
+        </div>
+        <div>
+          <input type="text" name="sc" class="cc" placeholder="CVV" /><br />
+          <input type="text" name="sc" class="cc" placeholder="MM/YYYY" />
+        </div>
+      </div>
+      <div class="btn-container">
+        <button>Submit</button>
+      </div>
+    </div>
+  </form>
+  <div class="workingwoman">
+    <img
+      src="{% static 'donations/images/womanworking.jpg' %}"
+      alt="woman working in field"
+    />
+  </div>
+</div>
+{% endblock %}

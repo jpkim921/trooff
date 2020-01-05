@@ -1,0 +1,23 @@
+{% extends 'donations/base.html' %}
+{% load static %}
+
+
+{% block css-style %}
+<link
+    rel="stylesheet"
+    type="text/css"
+    href="{% static 'donations/stylesheets/donations_view.css' %}"
+/>
+{% endblock %}
+
+{% block content %}
+
+<h1>Donations made</h1>
+{% for donation in donations %}
+    <div class='donation-container'>
+        <p class="donation-amount">${{ donation.amount }}</p>
+        <p class="donor-name">- {{ donation.donor_name }}</p>
+    </div>
+{% endfor %}
+
+{% endblock %}

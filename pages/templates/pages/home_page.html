@@ -1,0 +1,104 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+
+    {% block css-style %}
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'pages/stylesheets/homepage_style.css' %}"
+    />
+    {% endblock %}
+
+    {% block content %}
+    <div class="main">
+      <div class="heading">
+        <h1>Trooff</h1>
+        <hr class="line1" />
+      </div>
+      <div id="heading2">
+        <button class="tablinks">Pottery</button>
+        <a href="./donate"><button class="tablinks">Ways To Give</button></a>
+        <a href="./contact"><button class="tablinks">Contact</button></a>
+      </div>
+
+      <p id="mission">
+        Trooff is a non-profit organization that equipts and supports people
+        living in developing countries. We educate individuals on pottery art
+        and provide them with a platform to reach the masses by selling them
+        online. With the income, the individulas are able to purchase seeds and
+        animals to farm and sustain their livelihood. The families also receive
+        basic education on finance, health and farming to encourage growth and
+        success.
+      </p>
+
+      <div class="poverty_pic">
+        <img
+          src="{% static 'pages/images/poverty_pic.jpg' %}"
+          alt="sad child"
+        />
+      </div>
+      <div class="poverty_explain">
+        <p>
+          People living in third world countries like Cambodia, India and
+          Thailand struggle to live. The children are malnoutrishioned and
+          parents are barely scraping by. Many are fortunate to even afford 1
+          meal a day and often go to bed hungry. This is a sad reality that will
+          be passed down for many generations to come if help is not provided.
+        </p>
+      </div>
+
+      <div class="pottery_making">
+        <img
+          src="{% static 'pages/images/pottery1.jpg' %}"
+          alt="making pottery"
+        />
+      </div>
+      <div class="pottery_explanation">
+        <p>
+          Troff makes relationships and works with local villages to educate
+          individuals with pottery making. We have experts who are able to
+          volunteer in teaching and guiding the villagers to create professional
+          pieces. When the artworks are completed, Troff provides an online
+          platform where pieces can be sold globally. All donations and profits
+          received is given back to the villages and individuals so that they
+          can provide for their families.
+        </p>
+      </div>
+
+      <div class="pottery2">
+        <img
+          src="{% static 'pages/images/pottery2.jpg' %}"
+          alt="row of pottery"
+        />
+      </div>
+      <div class="other_education">
+        <h1>Other Assistance</h1>
+        <p>
+          Additional assistance is also provided for families so they can
+          improve and sustain their way of life.
+        </p>
+      </div>
+      <div class="points">
+        <ul>
+          <ol>
+            Financial education
+          </ol>
+          <ol>
+            Farming education
+          </ol>
+          <ol>
+            Health
+          </ol>
+          <ol>
+            Nutrition
+          </ol>
+        </ul>
+      </div>
+      <div class="workingwoman">
+        <img
+          src="{% static 'pages/images/womanworking.jpg' %}"
+          alt="woman working in field"
+        />
+      </div>
+    </div>
+    {% endblock %}

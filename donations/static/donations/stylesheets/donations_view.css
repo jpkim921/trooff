@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.donation-container {
+  border: 10px solid transparent;
+  border-image: url('../images/border-img.png') 30 stretch;
+  margin: 10px 0;
+  padding: 2px 0;
+  width: 150px;
+  text-align: center;
+}
+
+.donation-container > * {
+  margin: 0;
+}
+
+.donation-amount {
+  font-size: 1.3em;
+}
+
+.donor-name {
+  font-size: .8em;
+  color: #bbb;
+  padding-left: 50px;
+}

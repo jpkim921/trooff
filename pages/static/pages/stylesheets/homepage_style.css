@@ -1,0 +1,132 @@
+.main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "h1 h1 h1 h1"
+        "h2 h2 h2 h2"
+        "mis mis mis mis"
+        "pp pp pe pe"
+        "pot pot pm pm"
+        "other other other other"
+        "p2 points points ww";
+    justify-items: center;
+}
+
+.heading{
+    grid-area: h1;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 230%;
+    padding-bottom: 20px;
+    width: 100%; 
+}
+
+.line1{
+    width:50%;
+    height: 1px;
+    background-color: black;
+}
+
+.tablinks{
+    font-size: 200%;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    padding: 40px 90px;
+    border: none;
+    background: none;
+    display: inline-block;
+}
+
+.tablinks:hover{background: #eee;}
+
+.tablinks:focus {outline:0;}
+
+#heading2{
+    grid-area: h2;
+}
+
+#mission{
+    grid-area:mis;
+    font-size: 1.25em;
+    margin: 5%;
+    line-height: 28px;
+ 
+}
+
+.main_pictures{
+    grid-area: mpics; 
+}
+
+.poverty_pic{
+    grid-area: pp;
+}
+
+.poverty_pic > img{
+    width: 70%;
+    padding-left: 75px;
+}
+
+.poverty_explain{
+    grid-area: pe;
+    font-size: 1.25em;
+    padding-right:10%;
+    line-height: 28px;
+}
+
+.pottery_making{
+    grid-area: pm;
+}
+
+.pottery_making > img{
+    height:300px;
+    padding-right: 70px;
+    margin-top:90px;
+}
+
+.pottery_explanation{
+    grid-area: pot;
+    font-size: 1.25em;
+    padding-left:20%;
+    margin-top:90px;
+    line-height: 28px;
+}
+
+.workingwoman{
+    grid-area: ww;
+}
+
+.workingwoman> img{
+    height: 7%;
+    margin-top:50px;
+}
+
+.pottery2{
+    grid-area: p2;
+}
+
+.pottery2 > img{
+    width: 120%; height: 73%;
+    margin-top:50px;
+}
+
+.other_education{
+    grid-area: other;
+    margin-top:50px;
+}
+
+.other_education >h1{
+    text-align: center;
+}
+
+.other_education > p{
+    font-size: 1.25em;
+    text-align: center;
+}
+
+.points{
+    grid-area: points;
+    font-size: 1.5em;
+    text-align: center;
+    margin-top:50px;
+}
