@@ -42,7 +42,8 @@ INSTALLED_APPS = [
 
     # third party apps
     "pages",
-    "donations"
+    "donations",
+    # "donors"
 ]
 
 MIDDLEWARE = [

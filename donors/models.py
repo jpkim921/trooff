@@ -11,7 +11,3 @@ class Donor(models.Model):
     cc_num = models.IntegerField(default=123412412341234)
     ccv_num = models.IntegerField(default=000)
     cc_expiration = models.CharField(max_length=10, default="MM/YYYY")
-
-class Donation(models.Model):
-    amount = models.DecimalField(max_digits=19, decimal_places=2)
-    date = models.DateField(auto_now_add=True)
