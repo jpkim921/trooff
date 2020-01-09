@@ -4,13 +4,13 @@ from django.db import models
 
 
 class Donor(models.Model):
-    first_name = models.CharField(max_length=50, default="Required")
-    last_name = models.CharField(max_length=50, default="Required")
+    first_name = models.CharField(max_length=50)
+    last_name = models.CharField(max_length=50)
     email = models.EmailField(unique=True)
-    phone_number = models.IntegerField(default=1234567890)
-    cc_num = models.IntegerField(default=123412412341234)
-    ccv_num = models.IntegerField(default=000)
-    cc_expiration = models.CharField(max_length=10, default="MM/YYYY")
+    phone_number = models.IntegerField(unique=True)
+    cc_num = models.IntegerField()
+    ccv_num = models.IntegerField()
+    cc_expiration = models.CharField(max_length=10)
 
 class Donation(models.Model):
     amount = models.DecimalField(max_digits=19, decimal_places=2)
