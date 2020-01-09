@@ -1,0 +1,79 @@
+{% extends 'donations/base.html' %} {% load static %} {% block css-style %}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'donations/stylesheets/donation_form_page_style.css' %}"
+/>
+{% endblock %}
+
+<h1>Donation Form</h1>
+
+{% block content %}
+<div class="main">
+  <div class="top1">
+    <h1>Trooff</h1>
+    <hr class="line" />
+  </div>
+  <p class="top2">
+    Thank you for your donation. All the funds will go towards purchasing
+    pottery and farming equipment for individuals living in developing
+    countries. <br />
+    If you need any assistance, please reach out to Troof@gmail.com.
+  </p>
+
+  <div class="pottery2">
+    <img
+      src="{% static 'donations/images/pottery2.jpg' %}"
+      alt="row of pottery"
+    />
+  </div>
+
+  <form class="form" method="POST" action="">
+    {% csrf_token %}
+    <div class="information">
+      <h2 class="personal-information">Personal Information</h2>
+      <div>
+        <label>Full Name<br /></label>
+        {{ donor_form.first_name }}
+        <br />
+        {{ donor_form.last_name }}
+      </div>
+      <div>
+        <label>Email <br /></label>{{ donor_form.email }}
+      </div>
+      <div>
+        <label>Phone Number <br /></label>{{ donor_form.phone_number }}
+      </div>
+    </div>
+    <div class="details">
+      <h2>Donation Amount</h2>
+      <div>
+        {{ donation_form.amount }}
+      </div>
+      <h2 class="cc-details-heading">Credit Card Details</h2>
+      <div class="cc_info">
+        <div>
+          {{ donor_form.cc_num }}
+        </div>
+        <div>
+          {{ donor_form.ccv_num }}
+        </div>
+        <div>
+          {{ donor_form.cc_expiration }}
+        </div>
+      </div>
+      <div class="btn-container">
+        <button type="submit">Submit</button>
+      </div>
+    </div>
+    <!--<input type="submit" value="Submit" />-->
+  </form>
+  <div class="workingwoman">
+    <img
+      src="{% static 'donations/images/womanworking.jpg' %}"
+      alt="woman working in field"
+    />
+  </div>
+
+  {% endblock %}
+</div>
