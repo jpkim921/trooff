@@ -15,3 +15,4 @@ class Donor(models.Model):
 class Donation(models.Model):
     amount = models.DecimalField(max_digits=19, decimal_places=2)
     date = models.DateField(auto_now_add=True)
+    

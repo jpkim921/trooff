@@ -17,13 +17,13 @@ from django.contrib import admin
 from django.urls import path
 
 from pages.views import home_page_view, contact_page_view
-from donations.views import donations_view, get_donation, donation_form_page_view, donation_donor_form
+from donations.views import donations_view, donation_form_page_view, donation_donor_form
 
 
 urlpatterns = [
     path('', home_page_view),
     path('donations/', donations_view),
-    # path('donate/', donation_form_page_view),
+    path('donated/', donation_form_page_view),
     path('donate/', donation_donor_form),
     path('contact/', contact_page_view),
     path('admin/', admin.site.urls),
