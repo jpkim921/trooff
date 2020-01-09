@@ -23,7 +23,7 @@ from donations.views import donations_view, donation_form_page_view, donation_do
 urlpatterns = [
     path('', home_page_view),
     path('donations/', donations_view),
-    path('donated/', donation_form_page_view),
+    # path('donated/', donation_form_page_view),
     path('donate/', donation_donor_form),
     path('contact/', contact_page_view),
     path('admin/', admin.site.urls),
