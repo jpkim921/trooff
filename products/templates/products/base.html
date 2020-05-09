@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'products/style/index.css' %}" />
+    <link rel="stylesheet" href="{% static 'products/style/container.css' %}" />
+    <title>Troof Store</title>
+  </head>
+  <body>
+    <div id="page">
+      <header>
+        <nav>
+          <ul id="nav-links">
+            <li class="nav-link"><a href="">Home</a></li>
+            <li class="nav-link"><a href="">Store</a></li>
+            <li class="nav-link"><a href="">Contact Us</a></li>
+          </ul>
+        </nav>
+        <img src="{% static 'products/images/header_banner.jpg' %}" alt="" />
+      </header>
+      <div id="container">
+        <div id="content">
+          {% for product in products %}
+          <div class="product-tile">
+            <img src="{% static 'products/images/rear-dropout.jpg' %}" alt="" />
+            <h3>{{ product.product_name }}</h3>
+            <p class="price">{{ product.price }}</p>
+            <p>
+              {{ product.description }}
+            </p>
+            <button class="add-cart-button">Add to Cart</button>
+          </div>
+          {% endfor %}
+
+          <!-- <div class="product-tile">
+            <img src="{% static 'products/images/rear-dropout.jpg' %}" alt="" />
+            <h3>Karate Monkey Rear Dropout</h3>
+            <p class="price">$25.00</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+              eveniet doloribus veritatis unde molestias nam rem porro debitis
+              asperiores deleniti.
+            </p>
+            <button class="add-cart-button">Add to Cart</button>
+          </div>
+          <div class="product-tile">
+            <img src="{% static 'products/images/rear-dropout.jpg' %}" alt="" />
+            <h3>Karate Monkey Rear Dropout</h3>
+            <p class="price">$25.00</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+              eveniet doloribus veritatis unde molestias nam rem porro debitis
+              asperiores deleniti.
+            </p>
+            <button class="add-cart-button">Add to Cart</button>
+          </div>
+          <div class="product-tile">
+            <img src="{% static 'products/images/rear-dropout.jpg' %}" alt="" />
+            <h3>Karate Monkey Rear Dropout</h3>
+            <p class="price">$25.00</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+              eveniet doloribus veritatis unde molestias nam rem porro debitis
+              asperiores deleniti.
+            </p>
+            <button class="add-cart-button">Add to Cart</button>
+          </div>
+          <div class="product-tile">
+            <img src="{% static 'products/images/rear-dropout.jpg' %}" alt="" />
+            <h3>Karate Monkey Rear Dropout</h3>
+            <p class="price">$25.00</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+              eveniet doloribus veritatis unde molestias nam rem porro debitis
+              asperiores deleniti.
+            </p>
+            <button class="add-cart-button">Add to Cart</button>
+          </div> -->
+        </div>
+        <aside id="side-bar">
+          use this element for filtering, sorting, etc...
+        </aside>
+      </div>
+      <footer>
+        <h2>footer</h2>
+      </footer>
+    </div>
+  </body>
+</html>

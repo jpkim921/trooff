@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     "pages",
     "donations",
     # "donors"
+    "products"
 ]
 
 MIDDLEWARE = [
