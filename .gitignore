@@ -176,3 +176,6 @@ troof/additional_settings.py
 
 # mode modules
 node_modules
+
+# Misc
+.DS_Store
