@@ -2,8 +2,19 @@ from django.db import models
 
 
 class Product(models.Model):
-    product_name = models.CharField(max_length=50)
-    category_type = models.CharField(max_length=50)
-    price = models.DecimalField(max_digits=8, decimal_places=2)
-    date = models.DateField(auto_now_add=True)
-    description = models.TextField(max_length=100)
+
+    CATEGORY = (
+        ('Cup', 'Cup'),
+        ('Plate', 'Plate'),
+        ('Bowl', 'Bowl'),
+        ('Vase', 'Vase')
+    )
+
+    name = models.CharField(max_length=50, null=True)
+    category = models.CharField(max_length=50, null=True, choices=CATEGORY)
+    price = models.DecimalField(max_digits=8, decimal_places=2, null=True)
+    description = models.TextField(max_length=100, null=True)
+    date = models.DateField(auto_now_add=True, null=True)
+
+    def __str__(self):
+        return self.product_name
