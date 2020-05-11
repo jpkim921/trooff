@@ -4,7 +4,13 @@
   <div class="col-md-6">
     <div class="card card-body">
       <form action="" method="POST">
-        {% csrf_token %} {{form}}
+        {% csrf_token %} 
+        {{ formset.management_form }}
+        {% for form in formset %}
+            {{form}}
+            <hr>
+        {% endfor %}
+        <!-- {{formset}} -->
         <input class="btn"type="submit" name="Submit" />
       </form>
     </div>
