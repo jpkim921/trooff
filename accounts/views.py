@@ -7,6 +7,7 @@ from products.models import *
 from .forms import OrderForm
 from .filters import OrderFilter
 
+from django.core.paginator import Paginator
 
 def home(request):
     orders = Order.objects.all()
@@ -36,16 +37,21 @@ def products(request):
 def customer(request, pk):
     customer = Customer.objects.get(id=pk)
     orders = customer.order_set.all()
-    orders_count = orders.count()
+    orders_count = orders.count() 
 
     myFilter = OrderFilter(request.GET, queryset=orders)
     orders = myFilter.qs
+    
+    paginator = Paginator(orders, 5)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
 
     context = {
         'customer': customer,
         'orders': orders,
         'orders_count': orders_count,
-        'myFilter': myFilter
+        'myFilter': myFilter,
+        'page_obj': page_obj
     }
     return render(request, 'accounts/customer.html', context)
 
