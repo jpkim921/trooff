@@ -1,18 +1,29 @@
-{% extends 'accounts/base.html' %}
 <h1>Register</h1>
 
 <form method="POST" action="">
   {% csrf_token %}
-  {{form.username.label}}
-  {{form.username}}
-  
-  {{form.email.label}}
-  {{form.email}}
-  
-  {{form.password1.label}}
-  {{form.password1}}
-  
-  {{form.password2.label}}
-  {{form.password2}}
+  <div>
+    {{form.username.label}} {{form.username}}
+  </div>
+  <div>
+    {{form.email.label}} {{form.email}}
+  </div>
+  <div>
+    {{form.password1.label}} {{form.password1}}
+  </div>
+  <div>
+    {{form.password2.label}} {{form.password2}}
+  </div>
   <input type="submit" name="Create" />
 </form>
+
+<div>
+  {{form.errors}}
+</div>
+
+<div class="mt-4">
+  <div class="d-flex justify-content-center links">
+    Have an account?
+    <a href="{% url 'login' %}" class="ml-2">Log In</a>
+  </div>
+</div>
