@@ -5,8 +5,8 @@ from .models import *
 
 
 class OrderFilter(django_filters.FilterSet):
-    start_date = DateFilter(field_name="date_created", lookup_expr="gte")
-    end_date = DateFilter(field_name="date_created", lookup_expr="lte")
+    start_date = DateFilter(field_name="date_created", lookup_expr="gte", label="Start Date")
+    end_date = DateFilter(field_name="date_created", lookup_expr="lte", label="End Date")
 
     # note = CharFilter(fieldname="note", lookup_expr='icontains')
     class Meta:
