@@ -33,6 +33,7 @@ def registerUser(request):
             Customer.objects.create(
                 user=user,
                 name=user.username,
+                email=user.email,
             )
 
             messages.success(request, username + ' registered successfully')
