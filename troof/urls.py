@@ -16,6 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from django.conf.urls.static import static
+from django.conf import settings
+
 # from pages.views import home_page_view, contact_page_view
 # from donations.views import donations_view, donation_form_page_view, donation_donor_form
 
@@ -35,3 +38,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
 ]
+
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
