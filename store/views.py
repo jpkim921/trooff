@@ -15,14 +15,32 @@ def ProductView(request, pk):
 
 def CreateProduct(request):
     form = ProductForm()
-
     if request.method == "POST":
         form = ProductForm(request.POST)
         if form.is_valid():
             form.save()
             return redirect('storehome')
-
-
-
     context = {'form': form}
     return render(request, 'store/form.html', context)
+
+def EditProduct(request, pk):
+    product = Product.objects.get(id=pk)
+    form = ProductForm(instance=product)
+    if request.method == "POST":
+        form = ProductForm(request.POST, instance=product)
+        if form.is_valid():
+            form.save()
+            return redirect('storehome')
+    context = {'form': form}
+    return render(request, 'store/form.html', context)
+
+
+def DeleteProduct(request, pk):
+    product = Product.objects.get(id=pk)
+
+    if request.method == "POST":
+        product.delete()
+        return redirect('storehome')
+
+    context = {'product': product}
+    return render(request, 'store/delete.html', context)
