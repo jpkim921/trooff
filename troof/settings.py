@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     # "donors"
     "products",
     "django_filters",
+    "store",
 ]
 
 MIDDLEWARE = [

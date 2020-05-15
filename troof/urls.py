@@ -35,7 +35,8 @@ from django.conf import settings
 
 urlpatterns = [
     path('', include('accounts.urls')),
-    path('', include('products.urls')),
+    path('', include('store.urls')),
+    # path('', include('products.urls')),
     path('admin/', admin.site.urls),
 
 ]
