@@ -24,7 +24,9 @@
         <div id="content">
           {% for product in products %}
           <div class="product-tile">
-            <img src="{% static 'store/images/rear-dropout.jpg' %}" alt="" />
+            <a href="{% url 'product' product.id %}">
+              <img src="{% static 'store/images/rear-dropout.jpg' %}" alt="" />
+            </a>
             <h3>{{ product.product_name }}</h3>
             <p class="price">{{ product.price }}</p>
             <p>
