@@ -5,11 +5,12 @@ from django.core import serializers
 from .models import Product
 
 
-
-def ProductsApi(request):
-    products = Product.objects.all().values()
-    products_list = list(products)
-    return JsonResponse(products_list, safe=False)
+def ProductsView(request):
+    products = Product.objects.all()
+    return render(request, 'products/products.html', {'products': products})
 
 
-    
+# def ProductPage(request, pk):
+#     product = Product.objects.filter(id=pk).values()
+#     data = list(product)
+#     return JsonResponse(data, safe=False)
