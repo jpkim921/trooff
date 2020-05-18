@@ -51,6 +51,10 @@
   background-color: #bbb;
 }
 
+#side-bar form {
+  max-width: 100%;
+}
+
 @media (max-width: 1200px) {
   #container > * {
     width: 100%;
