@@ -1,11 +1,16 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from django.core import serializers
 
 from .models import Product
 
 
-def IndexView(request):
+def ProductsView(request):
     products = Product.objects.all()
+    return render(request, 'products/products.html', {'products': products})
 
-    return render(request, 'products/base.html', {'products': products})
+
+# def ProductPage(request, pk):
+#     product = Product.objects.filter(id=pk).values()
+#     data = list(product)
+#     return JsonResponse(data, safe=False)

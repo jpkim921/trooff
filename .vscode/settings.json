@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "/Users/Jayon/Desktop/dev/troof/bin/python",
+    "python.pythonPath": "/usr/local/opt/python/libexec/bin/python",
     "python.linting.pylintEnabled": true,
     "python.linting.enabled": true
 }
